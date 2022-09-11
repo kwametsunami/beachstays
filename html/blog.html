@@ -6,11 +6,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/sass/styles.css">
+    <script src="https://kit.fontawesome.com/3ac14fc81f.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
+    <header>
+        <nav class="desktop">
+            <h6><a href="#home">beachstays</a></h6>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#blog">blog</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <div class="hamburgerMenu">
+                <button class="dropdown" id="hammy"><i class="fa-solid fa-bars"></i></button>
+                <ul class="dropdownList">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#blog">blog</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="blogPage">
+        <section class="blog">
+            <article class="blogPost">
+                <h2>blog</h2>
+                <img src="../assets/post-image.jpg" alt="leafy walkway leading into a beach house in the evening">
+                    <div class="blogBlurb wrapper">
+                        <h6>Five days of ocean seas</h6>
+                        <p id="blogDate">Monday January 21st, 2019</p><p>by</p><p id="author">Bora</p>
+                        <p class="blogContent">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa recusandae molestias illum! Ea rem minima, accusamus aliquam voluptatem aut numquam asperiores aperiam repellendus. Suscipit aliquam maxime, animi quisquam deserunt corporis porro ad rem ipsam perspiciatis error voluptatem pariatur optio repellat similique quam voluptatibus nesciunt modi enim doloribus natus eos! Recusandae.
 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis numquam beatae et dignissimos deleniti debitis explicabo, quae eaque, consequatur reprehenderit atque. Alias, nisi? Cum sit vel quia cumque quo qui totam fuga, neque aspernatur, distinctio eveniet hic nobis aut quam odit temporibus veritatis accusantium, architecto voluptate animi ipsa corrupti? Doloribus debitis ab maiores, tempora provident non voluptate temporibus dolore dolor deleniti quasi obcaecati perferendis fuga, molestias ea possimus perspiciatis! Facilis pariatur quam voluptates quisquam quia.
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam quos praesentium doloribus repellendus quod sint, labore eveniet, ex animi, adipisci obcaecati voluptatum corporis nisi a incidunt nam! Ducimus eius a officiis dolorem cum commodi, maiores nisi numquam error impedit molestiae quis nesciunt quaerat consequuntur neque esse odit, asperiores explicabo? Commodi repellat corrupti officia perferendis sequi, maiores amet debitis pariatur eaque eveniet porro voluptas molestias vel reiciendis blanditiis necessitatibus eius quaerat consequatur itaque nihil eum nobis, iure iste rerum. In perspiciatis optio commodi debitis harum facere incidunt numquam vero officiis, animi mollitia, eveniet quia voluptatum atque nostrum eius praesentium id!
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium molestias, excepturi nobis, quae praesentium quam incidunt omnis vitae rerum obcaecati dignissimos laborum tenetur expedita nostrum, nulla quas ad ullam sit.
+                        </p>
+                    </div>
+                    <div class="postedComments">
+                        <p id="commentHeading">Comments:</p>
+                        <div class="comment">
+                            <img src="../assets/comment-image.jpg" alt="user Reyansh's profile picture">
+                            <p><span id="commentDate">Tuesday October 9th, 2019</span> by <span id="user">Reyansh</span></p>
+                            <p id="commentMessage">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa accusamus eaque quaerat earum sapiente quam esse, iusto iste illo harum incidunt error, possimus recusandae facere sequi delectus doloremque culpa sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aperiam a alias reiciendis, quidem sapiente aspernatur, veritatis omnis praesentium sunt nam animi, quibusdam enim mollitia. Ratione culpa aperiam assumenda tempora.</p>
+                        </div>
+                        <div class="comment">
+                            <img src="../assets/comment-image2.jpg" alt="user Olivia's profile picture">
+                            <p><span id="commentDate">Wednesday October 10th, 2019</span> by <span id="user">Olivia</span></p>
+                            <p id="commentMessage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officiis quaerat, reprehenderit tempore voluptas eos, non necessitatibus ad iusto adipisci quia rem, labore officia omnis fugit. Aut excepturi modi deleniti.</p>
+                        </div>
+                        <div class="commentForm">
+                                <form action="#">
+                                    <label for="name"></label>
+                                    <input type="text" id="name" name="name" placeholder="Name">
+                                        
+                                    <label for="email"></label>
+                                    <input type="email" id="email" name="email" placeholder="Email address">
+                                        
+                                    <label for="message"></label>
+                                    <textarea name="message" id="message" cols="70" rows="10" placeholder="Message"></textarea>
+                                        
+                                         <button class="submit">post comment</button>
+                                    </form>
+                        </div>
+                    </div>
+            </article>
+        </section>
+        <section class="mission">
+            <img src="../assets/sidebar-image.jpg" alt="peaceful seaside beach house">
+            <p class="missionTitle">Our mission</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, fugiat molestiae veritatis amet unde voluptatum sit? Veritatis ducimus vero alias quas aut tempore esse doloremque. <a href="#mission">Find out more.</a></p>
+            <ul class="recentPosts">
+                <li>
+                    <a href="#post1">Lorem ipsum dolor sit</a>
+                </li>
+                <li>
+                    <a href="#post2">Quas, fugiat molestiae veritatis</a>
+                </li>
+                <li>
+                    <a href="#post3">Amet unde voluptatum sit</a>
+                </li>
+                <li>
+                    <a href="#post4">Tempore esse doloremque</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>Copyright © 2022 Juno College</p>
+    </footer>
 </body>
-
 </html>
