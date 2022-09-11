@@ -1,0 +1,83 @@
+@use "variables" as *;
+
+// playfair display sc
+@font-face {
+    font-family: "Playfair Display SC";
+    src: url('../../fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Playfair Display SC";
+    src: url('../../fonts/Playfair_Display_SC/PlayfairDisplaySC-BlackItalic.ttf');
+    font-style: italic;
+}
+
+// lato
+@font-face {
+    font-family: "Lato";
+    src: url('../../fonts/Lato/Lato-Regular.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../../fonts/Lato/Lato-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../../fonts/Lato/Lato-Light.ttf');
+    font-family: light;
+}
+
+// styles
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $bodyFont;
+    font-size: 2rem;
+    line-height: 32px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-family: $headingFont;
+    font-size: 11.2rem;
+    font-style: italic
+}
+
+h2, h3, h4, h5 {
+    line-height: 58px;
+}
+
+h6 {
+    font-family: $headingFont;
+    font-size: 3.46rem;
+    font-style: italic;
+}
+
+button {
+    font-family: $headingFont;
+    font-style: italic;
+}
+
+ul, li, a, input {
+    padding: 0;
+    margin: 0;
+}
+
+ul:not(.recentPosts) {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
