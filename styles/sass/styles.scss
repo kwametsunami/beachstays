@@ -1,4 +1,7 @@
 @use "partials/setup";
 @use "partials/fonts.scss";
 @use "partials/baseStyles";
-@use "partials/variables";
+@use "partials/variables" as *;
+@use "partials/nav";
+@use "partials/header";
+

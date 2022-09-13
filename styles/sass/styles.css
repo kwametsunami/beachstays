@@ -295,15 +295,15 @@ a {
 }
 
 .wrapper {
-  max-width: 1260px;
+  max-width: 1600px;
   width: 90%;
   margin: 0 auto;
 }
 
 button {
   background-color: #063974;
-  padding: 7px, 12px;
-  border: 0;
+  padding: 5px 10px;
+  border: 2px #063974 solid;
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
@@ -311,4 +311,125 @@ button {
   line-height: 32px;
   letter-spacing: 1px;
   font-size: 2rem;
+}
+button:hover {
+  background-color: white;
+  color: #063974;
+}
+button:focus {
+  background-color: white;
+  color: #063974;
+}
+
+.desktop {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.desktop h6 {
+  margin: 0;
+  padding: 0;
+  color: #50E3C2;
+  display: inline-block;
+}
+.desktop h6 a:hover {
+  color: white;
+}
+.desktop .desktopMenu {
+  display: flex;
+  z-index: 5;
+}
+.desktop .desktopMenu li {
+  margin: 0 25px;
+  text-transform: uppercase;
+  color: white;
+}
+.desktop .desktopMenu li a:hover {
+  color: #50E3C2;
+}
+
+.mobile {
+  display: flex;
+  justify-content: flex-end;
+  display: none;
+}
+.mobile .hamburgerMenu .dropdownList {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 5px;
+  border: 2px solid #acacac;
+  background-color: #acacac;
+}
+.mobile .hamburgerMenu .dropdownList li {
+  padding: 2px 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100%;
+  z-index: -3;
+}
+
+#homePage {
+  background-image: url(../../assets/home-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  z-index: -3;
+}
+#homePage .headerWrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+#homePage .headerWrapper .title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  bottom: 40%;
+  margin: 0 auto;
+  z-index: 1;
+}
+#homePage .headerWrapper .title .titleTop {
+  padding: 0;
+  margin: 0 0 40px;
+  color: #0C5F4C;
+  font-size: 7.5rem;
+  letter-spacing: 0.75rem;
+}
+#homePage .headerWrapper .title .titleBottom {
+  margin: 0;
+  color: #063974;
+}
+#homePage .headerWrapper .sunglasses {
+  position: absolute;
+  top: 40%;
+  left: 0px;
+}
+
+#blogPage {
+  background-image: url(../../assets/blog-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  z-index: -3;
+}
+
+#contactPage {
+  background-image: url(../../assets/contact-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  z-index: -3;
 }/*# sourceMappingURL=styles.css.map */

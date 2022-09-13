@@ -11,32 +11,35 @@
     <script src="https://kit.fontawesome.com/3ac14fc81f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav class="desktop">
-            <h6><a href="#home">beachstays</a></h6>
-            <ul>
-                <li><a href="#home">home</a></li>
+    <header id="homePage">
+        <nav class="desktop wrapper">
+            <h6><a href="./index.html">beachstays</a></h6>
+            <ul class="desktopMenu">
+                <li><a href="./index.html">home</a></li>
                 <li><a href="#about">about</a></li>
-                <li><a href="#blog">blog</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="./blog.html">blog</a></li>
+                <li><a href="./contact.html">contact</a></li>
             </ul>
         </nav>
-        <nav class="mobile">
+        <nav class="mobile wrapper">
             <div class="hamburgerMenu">
                 <button class="dropdown" id="hammy"><i class="fa-solid fa-bars"></i></button>
                 <ul class="dropdownList">
-                    <li><a href="#home">home</a></li>
+                    <li><a href="./index.html">home</a></li>
                     <li><a href="#about">about</a></li>
-                    <li><a href="#blog">blog</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="./blog.html">blog</a></li>
+                    <li><a href="./contact.html">contact</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="sunglasses">
-            <img src="../assets/header-box.jpg" alt="sunglasses placed on a sandy beach">
-        </div>
-        <div class="title">
-            <h3>welcome to </h3><h1>beachstays</h1>
+        <div class="headerWrapper">
+            <div class="title">
+                <h3 class="titleTop">welcome to</h3>
+                <h1 class="titleBottom">beachstays</h1>
+            </div>
+            <div class="sunglasses">
+                <img src="../assets/header-box.jpg" alt="sunglasses placed on a sandy beach">
+            </div>
         </div>
     </header>
     <section class="content wrapper">

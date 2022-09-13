@@ -1,15 +1,15 @@
 @use "variables" as *;
 
 .wrapper {
-    max-width: 1260px;
+    max-width: 1600px;
     width: 90%;
     margin: 0 auto;
 }
 
 button {
     background-color: $twilightBlue;
-    padding: 7px, 12px;
-    border: 0;
+    padding: 5px 10px;
+    border: 2px $twilightBlue solid;
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
@@ -17,4 +17,12 @@ button {
     line-height: 32px;
     letter-spacing: 1px;
     font-size: 2rem;
+    &:hover {
+        background-color: $white;
+        color: $twilightBlue;
+    }
+    &:focus {
+        background-color: $white;
+        color: $twilightBlue;
+    }
 }

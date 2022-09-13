@@ -1,0 +1,50 @@
+@use "variables" as *;
+
+.desktop {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    h6 {
+        margin: 0;
+        padding: 0;
+        color: $greenishCyan;
+        display: inline-block;
+        a:hover {
+            color: $white;
+        }
+    }
+    .desktopMenu {
+        display: flex;
+        z-index: 5;
+        li {
+            margin: 0 25px;
+            text-transform: uppercase;
+            color: $white;
+            a:hover {
+                color: $greenishCyan;
+            }
+        }
+    }
+
+}
+
+.mobile {
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+    .hamburgerMenu {
+        .dropdownList {
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            padding: 10px 5px;
+            border: 2px solid #acacac;
+            background-color: #acacac;
+            }
+        
+            .dropdownList li {
+            padding: 2px 0;
+            }
+    }
+}
+
