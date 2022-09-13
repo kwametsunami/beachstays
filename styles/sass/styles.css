@@ -432,4 +432,15 @@ header {
   width: 100%;
   max-width: 100%;
   z-index: -3;
+}
+
+footer {
+  background-color: rgb(55, 55, 55);
+  text-align: center;
+  padding: 5px;
+  margin-top: 15px;
+}
+footer p {
+  color: white;
+  line-height: 0px;
 }/*# sourceMappingURL=styles.css.map */
