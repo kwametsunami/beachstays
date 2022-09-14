@@ -263,8 +263,19 @@ h1 {
   font-style: italic;
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4 {
   line-height: 58px;
+}
+
+h4 {
+  font-size: 3.8rem;
+  letter-spacing: 3.8px;
+}
+
+h5 {
+  font-family: "Lato";
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 
 h6 {
@@ -295,30 +306,37 @@ a {
 }
 
 .wrapper {
-  max-width: 1600px;
+  max-width: 1250px;
   width: 90%;
   margin: 0 auto;
 }
 
 button {
   background-color: #063974;
-  padding: 5px 10px;
+  padding: 7px 10px;
   border: 2px #063974 solid;
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
-  color: white;
+  color: #ffffff;
   line-height: 32px;
   letter-spacing: 1px;
   font-size: 2rem;
 }
 button:hover {
-  background-color: white;
+  background-color: #ffffff;
   color: #063974;
 }
 button:focus {
-  background-color: white;
+  background-color: #ffffff;
   color: #063974;
+}
+
+.fa-solid {
+  background-color: #50E3C2;
+  color: white;
+  border: 1px solid #50E3C2;
+  font-size: 2.5rem;
 }
 
 .desktop {
@@ -331,9 +349,13 @@ button:focus {
   padding: 0;
   color: #50E3C2;
   display: inline-block;
+  transition: 0.5s;
+}
+.desktop h6:hover {
+  transform: scale(1.1);
 }
 .desktop h6 a:hover {
-  color: white;
+  color: #ffffff;
 }
 .desktop .desktopMenu {
   display: flex;
@@ -342,7 +364,8 @@ button:focus {
 .desktop .desktopMenu li {
   margin: 0 25px;
   text-transform: uppercase;
-  color: white;
+  color: #ffffff;
+  transition: 0.5s;
 }
 .desktop .desktopMenu li a:hover {
   color: #50E3C2;
@@ -380,6 +403,7 @@ header {
   width: 100%;
   max-width: 100%;
   z-index: -3;
+  margin-bottom: 13.5%;
 }
 #homePage .headerWrapper {
   display: flex;
@@ -420,6 +444,7 @@ header {
   background-image: url(../../assets/blog-image-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0, 0;
   width: 100%;
   max-width: 100%;
   z-index: -3;
@@ -429,18 +454,147 @@ header {
   background-image: url(../../assets/contact-image-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0, 0;
   width: 100%;
   max-width: 100%;
   z-index: -3;
 }
 
+.content {
+  margin-bottom: 150px;
+}
+.content .guyana {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+.content .guyana .guyanaBlurb {
+  width: calc(66% - 30px);
+}
+.content .guyana .guyanaImage {
+  width: 34%;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.content .guyana .guyanaImage img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.content .guyana .guyanaImage .borderLines {
+  border-left: 2.5rem solid #50E3C2;
+  border-bottom: 2.5rem solid #50E3C2;
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  bottom: -25px;
+  left: -20px;
+  z-index: -1;
+}
+
+.background {
+  background-color: #D2F9F1;
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+}
+.background .imageGallery {
+  display: flex;
+  justify-content: space-between;
+}
+.background .imageGallery img {
+  width: calc(33.3333333333% - 25px);
+  height: auto;
+}
+
+.pageLinks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+.pageLinks .beachHouses, .pageLinks .community, .pageLinks .blog,
+.pageLinks .contact {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.pageLinks .beachHouses .fa-solid, .pageLinks .community .fa-solid, .pageLinks .blog .fa-solid,
+.pageLinks .contact .fa-solid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 5px;
+  top: 50px;
+}
+.pageLinks .beachHouses .linkBlurb, .pageLinks .community .linkBlurb, .pageLinks .blog .linkBlurb,
+.pageLinks .contact .linkBlurb {
+  width: 85%;
+}
+.pageLinks .beachHouses h5, .pageLinks .community h5, .pageLinks .blog h5,
+.pageLinks .contact h5 {
+  color: #0C5F4C;
+}
+.pageLinks .beachHouses p, .pageLinks .community p, .pageLinks .blog p,
+.pageLinks .contact p {
+  margin: 0;
+}
+
+.schedule {
+  display: flex;
+  justify-content: space-between;
+}
+.schedule .newLocations {
+  text-align: right;
+  width: calc(50% - 25px);
+}
+.schedule .newLocations .newLocationsBlurb {
+  width: 80%;
+}
+.schedule .plan {
+  width: calc(50% - 25px);
+}
+.schedule h4 {
+  color: #063974;
+}
+
+.bottomBackground {
+  background-image: url(../../assets/banner-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0, 0;
+  width: 100%;
+  height: 65vh;
+  max-width: 100%;
+}
+
+.freeTrip {
+  text-align: center;
+  padding-top: 150px;
+}
+.freeTrip h4 {
+  color: #0C5F4C;
+  margin: 0;
+}
+.freeTrip button {
+  margin: 15px 0px;
+}
+
 footer {
-  background-color: rgb(55, 55, 55);
+  background-color: #373737;
   text-align: center;
   padding: 5px;
   margin-top: 15px;
 }
 footer p {
-  color: white;
+  color: #ffffff;
   line-height: 0px;
 }/*# sourceMappingURL=styles.css.map */

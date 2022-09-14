@@ -9,6 +9,10 @@
         padding: 0;
         color: $greenishCyan;
         display: inline-block;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.1);
+        }
         a:hover {
             color: $white;
         }
@@ -20,6 +24,7 @@
             margin: 0 25px;
             text-transform: uppercase;
             color: $white;
+            transition: 0.5s;
             a:hover {
                 color: $greenishCyan;
             }

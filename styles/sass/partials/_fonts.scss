@@ -51,8 +51,19 @@ h1 {
     font-style: italic
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4 {
     line-height: 58px;
+}
+
+h4 {
+    font-size: 3.8rem;
+    letter-spacing: 3.8px;
+}
+
+h5 {
+    font-family: $bodyFont;
+    font-size: 3.5rem;
+    font-weight: bold;
 }
 
 h6 {
