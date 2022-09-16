@@ -615,8 +615,6 @@ header {
   width: 34%;
   max-width: 100%;
   height: auto;
-  display: flex;
-  justify-content: flex-end;
   position: relative;
 }
 .content .guyana .guyanaImage img {
@@ -627,11 +625,11 @@ header {
 .content .guyana .guyanaImage .borderLines {
   border-left: 2.5rem solid #50E3C2;
   border-bottom: 2.5rem solid #50E3C2;
-  width: 95%;
-  height: 95%;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: -25px;
-  left: -20px;
+  bottom: -15px;
+  left: -25px;
   z-index: -1;
 }
 
