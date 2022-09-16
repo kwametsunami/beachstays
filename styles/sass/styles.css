@@ -263,6 +263,12 @@ h1 {
   font-style: italic;
 }
 
+h2 {
+  font-family: "Lato";
+  font-size: 8.7rem;
+  letter-spacing: 9px;
+}
+
 h2, h3, h4 {
   line-height: 58px;
 }
@@ -305,6 +311,58 @@ a {
   transition: 0.3s;
 }
 
+input {
+  font-family: "Lato";
+  color: #063974;
+}
+input::-moz-placeholder {
+  font-family: "Lato";
+  font-size: 2rem;
+  line-height: 32px;
+  letter-spacing: 2px;
+  padding: 0 0 5px 5px;
+}
+input:-ms-input-placeholder {
+  font-family: "Lato";
+  font-size: 2rem;
+  line-height: 32px;
+  letter-spacing: 2px;
+  padding: 0 0 5px 5px;
+}
+input::placeholder {
+  font-family: "Lato";
+  font-size: 2rem;
+  line-height: 32px;
+  letter-spacing: 2px;
+  padding: 0 0 5px 5px;
+}
+
+textarea {
+  font-family: "Lato";
+  color: #063974;
+}
+textarea::-moz-placeholder {
+  font-family: "Lato";
+  font-size: 2rem;
+  line-height: 32px;
+  letter-spacing: 2px;
+  padding: 0 0 5px 5px;
+}
+textarea:-ms-input-placeholder {
+  font-family: "Lato";
+  font-size: 2rem;
+  line-height: 32px;
+  letter-spacing: 2px;
+  padding: 0 0 5px 5px;
+}
+textarea::placeholder {
+  font-family: "Lato";
+  font-size: 2rem;
+  line-height: 32px;
+  letter-spacing: 2px;
+  padding: 0 0 5px 5px;
+}
+
 .wrapper {
   max-width: 1250px;
   width: 90%;
@@ -337,6 +395,78 @@ button:focus {
   color: white;
   border: 1px solid #50E3C2;
   font-size: 2.5rem;
+}
+
+form {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  position: relative;
+  z-index: 5;
+}
+form .formBorder {
+  border-right: 2.5rem solid #50E3C2;
+  border-bottom: 2.5rem solid #50E3C2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  z-index: -2;
+}
+form .topForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 25px 0;
+  position: relative;
+}
+form .topForm input {
+  border: 0;
+  border-bottom: 2px solid #50E3C2;
+  width: calc(50% - 20px);
+  padding: 20px;
+}
+form .topForm input[type=text] {
+  margin-right: 10px;
+  position: absolute;
+  left: 0px;
+}
+form .topForm input[type=email] {
+  margin-left: 10px;
+}
+form .topForm input:focus {
+  outline: none;
+  border: 2px double #50E3C2;
+}
+form label[for=message] {
+  display: inline-block;
+  width: 100%;
+}
+form textarea {
+  border: 2px solid #50E3C2;
+  padding: 20px;
+}
+form textarea:focus {
+  outline: none;
+  border: 2px double #50E3C2;
+}
+form button {
+  margin: 50px 0 0 0;
+}
+
+.socialBar {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.socialBar .fa-brands {
+  font-size: 3rem;
+}
+.socialBar a:hover {
+  color: #50E3C2;
+  transform: scale(1.3);
 }
 
 .desktop {
@@ -391,7 +521,7 @@ button:focus {
 header {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 85vh;
   max-height: 100%;
   z-index: -3;
 }
@@ -416,10 +546,9 @@ header {
 #homePage .headerWrapper .title {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
   position: absolute;
   bottom: 40%;
+  left: 35%;
   margin: 0 auto;
   z-index: 1;
 }
@@ -436,8 +565,14 @@ header {
 }
 #homePage .headerWrapper .sunglasses {
   position: absolute;
-  top: 40%;
+  top: 25%;
   left: 0px;
+  width: 43%;
+}
+#homePage .headerWrapper .sunglasses img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 #blogPage {
@@ -458,6 +593,7 @@ header {
   width: 100%;
   max-width: 100%;
   z-index: -3;
+  height: 60vh;
 }
 
 .content {
@@ -505,9 +641,42 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.background .imageGallery img {
-  width: calc(33.3333333333% - 25px);
+.background .imageGallery .beachHouseGallery {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  transition: all 0.8s;
+}
+.background .imageGallery .beachHouseGallery img {
+  width: 100%;
+  max-width: 100%;
   height: auto;
+}
+.background .imageGallery .beachHouseGallery a p {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 40%;
+  text-align: center;
+  font-size: 3rem;
+  flex-wrap: wrap;
+  display: none;
+  font-family: "Playfair Display SC";
+  color: #373737;
+}
+.background .imageGallery .beachHouseGallery:hover {
+  transform: scale(1.05);
+}
+.background .imageGallery .beachHouseGallery:hover img {
+  opacity: 0.3;
+}
+.background .imageGallery .beachHouseGallery:hover p {
+  display: inline;
+  opacity: 1;
 }
 
 .pageLinks {
@@ -553,14 +722,38 @@ header {
   justify-content: space-between;
 }
 .schedule .newLocations {
-  text-align: right;
-  width: calc(50% - 25px);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  position: relative;
+  width: 50%;
+  height: 100%;
 }
 .schedule .newLocations .newLocationsBlurb {
   width: 80%;
+  text-align: right;
+}
+.schedule .newLocations .newLocationsImage {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -80px;
+  left: 0px;
+}
+.schedule .newLocations .newLocationsImage img {
+  width: 100%;
+  height: 100%;
+}
+.schedule .newLocations .newLocationsImage .borderLines2 {
+  border-bottom: 2rem solid #50E3C2;
+  border-right: 2rem solid #50E3C2;
+  position: absolute;
 }
 .schedule .plan {
   width: calc(50% - 25px);
+}
+.schedule .plan .planBlurb {
+  width: 80%;
 }
 .schedule h4 {
   color: #063974;
@@ -588,11 +781,41 @@ header {
   margin: 15px 0px;
 }
 
+.contactSection {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.contactSection .contactForm {
+  position: relative;
+  top: -375px;
+  left: -150px;
+}
+.contactSection .contactForm h2 {
+  color: #ffffff;
+  margin: 40px;
+}
+.contactSection .contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contactSection .contactInfo #contactEmail {
+  font-weight: bold;
+  font-size: 3rem;
+}
+.contactSection .contactInfo #contactEmail:hover {
+  color: #063974;
+  border-bottom: 2px solid #063974;
+}
+.contactSection .contactInfo p:not(:first-child) {
+  margin: 5px 0;
+}
+
 footer {
   background-color: #373737;
   text-align: center;
   padding: 5px;
-  margin-top: 15px;
 }
 footer p {
   color: #ffffff;

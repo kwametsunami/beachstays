@@ -51,6 +51,12 @@ h1 {
     font-style: italic
 }
 
+h2 {
+    font-family: $bodyFont;
+    font-size: 8.7rem;
+    letter-spacing: 9px;
+}
+
 h2, h3, h4 {
     line-height: 58px;
 }
@@ -91,4 +97,28 @@ a {
     color: inherit;
     cursor: pointer;
     transition: 0.3s;
+}
+
+input {
+    font-family: $bodyFont;
+    color: $twilightBlue;
+    &::placeholder {
+        font-family: $bodyFont;
+        font-size: 2rem;
+        line-height: 32px;
+        letter-spacing: 2px;
+        padding: 0 0 5px 5px;
+    }
+}
+
+textarea {
+    font-family: $bodyFont;
+    color: $twilightBlue;
+    &::placeholder {
+        font-family: $bodyFont;
+        font-size: 2rem;
+        line-height: 32px;
+        letter-spacing: 2px;
+        padding: 0 0 5px 5px;
+    }
 }

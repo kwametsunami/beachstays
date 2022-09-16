@@ -33,3 +33,76 @@ button {
     border: 1px solid $greenishCyan;
     font-size: 2.5rem;
 }
+
+form {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    position: relative;
+    z-index: 5;
+    .formBorder {
+        border-right: 2.5rem solid $greenishCyan;
+        border-bottom: 2.5rem solid $greenishCyan;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -25px;
+        right: -25px;
+        z-index: -2;
+    }
+    .topForm {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 25px 0;
+        position: relative;
+        input {
+            border: 0;
+            border-bottom: 2px solid $greenishCyan;
+            width: calc((100%/2) - 20px);
+            padding: 20px;
+            &[type=text] {
+                margin-right: 10px;
+                position: absolute;
+                left: 0px;
+            }
+            &[type=email] {
+                margin-left: 10px;
+            }
+            &:focus {
+                outline: none;
+                border: 2px double $greenishCyan;
+            }
+        }
+    }
+    label[for="message"] {
+        display: inline-block;
+        width: 100%;
+    }
+    textarea {
+        border: 2px solid $greenishCyan;
+        padding: 20px;
+        &:focus {
+        outline: none;
+        border: 2px double $greenishCyan;
+        }
+    }
+    button {
+        margin: 50px 0 0 0;
+    }
+}
+
+
+.socialBar {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    .fa-brands {
+        font-size: 3rem;
+    }
+    a:hover {
+        color: $greenishCyan;
+        transform: scale(1.3);
+    }
+}
