@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -300,7 +301,7 @@ ul, li, a, input {
   margin: 0;
 }
 
-ul:not(.recentPosts) {
+ul {
   list-style-type: none;
 }
 
@@ -688,14 +689,14 @@ header {
   flex-wrap: wrap;
   padding: 100px 0;
 }
-.pageLinks .beachHouses, .pageLinks .community, .pageLinks .blog,
+.pageLinks .beachHouses, .pageLinks .community, .pageLinks .blogLink,
 .pageLinks .contact {
   width: 50%;
   display: flex;
   justify-content: space-between;
   position: relative;
 }
-.pageLinks .beachHouses .fa-solid, .pageLinks .community .fa-solid, .pageLinks .blog .fa-solid,
+.pageLinks .beachHouses .fa-solid, .pageLinks .community .fa-solid, .pageLinks .blogLink .fa-solid,
 .pageLinks .contact .fa-solid {
   display: flex;
   justify-content: center;
@@ -707,19 +708,19 @@ header {
   left: 5px;
   top: 50px;
 }
-.pageLinks .beachHouses .linkBlurb, .pageLinks .community .linkBlurb, .pageLinks .blog .linkBlurb,
+.pageLinks .beachHouses .linkBlurb, .pageLinks .community .linkBlurb, .pageLinks .blogLink .linkBlurb,
 .pageLinks .contact .linkBlurb {
   width: 85%;
 }
-.pageLinks .beachHouses h5, .pageLinks .community h5, .pageLinks .blog h5,
+.pageLinks .beachHouses h5, .pageLinks .community h5, .pageLinks .blogLink h5,
 .pageLinks .contact h5 {
   color: #0C5F4C;
 }
-.pageLinks .beachHouses h5:hover, .pageLinks .community h5:hover, .pageLinks .blog h5:hover,
+.pageLinks .beachHouses h5:hover, .pageLinks .community h5:hover, .pageLinks .blogLink h5:hover,
 .pageLinks .contact h5:hover {
   text-decoration: underline;
 }
-.pageLinks .beachHouses p, .pageLinks .community p, .pageLinks .blog p,
+.pageLinks .beachHouses p, .pageLinks .community p, .pageLinks .blogLink p,
 .pageLinks .contact p {
   margin: 0;
 }
@@ -824,6 +825,7 @@ header {
 .blogPage {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .blogPage h2 {
   padding: 25px 75px;
@@ -835,6 +837,8 @@ header {
 .blogPage .blogImage {
   position: relative;
   width: 100%;
+  top: -50px;
+  left: -20px;
 }
 .blogPage .blogImage img {
   width: 100%;
@@ -862,10 +866,15 @@ header {
 .blogPage .blogPost #author {
   font-weight: bold;
 }
+.blogPage .blogPost .blogBlurb {
+  padding-left: 125px;
+  padding-right: 50px;
+}
 
 .postedComments {
   display: flex;
   flex-direction: column;
+  padding-left: 125px;
 }
 .postedComments #commentHeading {
   font-weight: bold;
@@ -886,6 +895,33 @@ header {
 }
 .postedComments .commentBlock .commentImage {
   padding: 5px 15px 0 0;
+}
+
+.mission {
+  position: relative;
+  right: -15.5px;
+  padding-top: 100px;
+}
+.mission .missionStatement a {
+  color: #0C5F4C;
+}
+.mission .missionStatement a:hover {
+  text-decoration: underline;
+}
+.mission .bigger {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #063974;
+}
+.mission .recentPostsList {
+  padding: 0 20px;
+}
+.mission .recentPostsList li a:hover {
+  text-decoration: underline;
+}
+.mission .recentPostsList li::before {
+  content: "•";
+  color: #50E3C2;
 }
 
 .contactSection {

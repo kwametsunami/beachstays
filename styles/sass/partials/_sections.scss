@@ -96,7 +96,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 100px 0;
-        .beachHouses, .community, .blog,
+        .beachHouses, .community, .blogLink,
         .contact {
             width: calc(100%/2);
             display: flex;
@@ -232,6 +232,7 @@
 .blogPage {
     display: flex; 
     justify-content: space-between;
+    position: relative;
     h2 {
         padding: 25px 75px;
         color: $white;
@@ -242,8 +243,8 @@
     .blogImage {
         position: relative;
         width: 100%;
-        // top: -50px;
-        // left: -20px;
+        top: -50px;
+        left: -20px;
         img {
             width: 100%;
             max-width: 100%;
@@ -270,12 +271,17 @@
         #author {
             font-weight: bold;
         }
+        .blogBlurb {
+            padding-left: 125px;
+            padding-right: 50px;
+        }
     }
 }
 
 .postedComments {
     display: flex;
     flex-direction: column;
+    padding-left: 125px;
     #commentHeading {
         font-weight: bold;
     }
@@ -296,6 +302,35 @@
         }
         .commentImage {
             padding: 5px 15px 0 0;
+        }
+    }
+}
+
+.mission {
+    position: relative;
+    right: -15.5px;
+    padding-top: 100px;
+    .missionStatement {
+        a {
+            color: $spruce;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .bigger {
+        font-size: 3rem;
+        font-weight: bold;
+        color: $twilightBlue;
+    }
+    .recentPostsList {
+        padding: 0 20px;
+        li a:hover {
+            text-decoration: underline;
+        }
+        li::before {
+            content: "\2022";
+            color: $greenishCyan;
         }
     }
 }
