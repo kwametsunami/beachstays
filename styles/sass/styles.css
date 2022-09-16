@@ -523,7 +523,7 @@ header {
   flex-direction: column;
   height: 85vh;
   max-height: 100%;
-  z-index: -3;
+  z-index: -5;
 }
 
 #homePage {
@@ -580,9 +580,9 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0, 0;
+  height: 60vh;
   width: 100%;
   max-width: 100%;
-  z-index: -3;
 }
 
 #contactPage {
@@ -590,10 +590,10 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0, 0;
+  height: 60vh;
   width: 100%;
   max-width: 100%;
   z-index: -3;
-  height: 60vh;
 }
 
 .content {
@@ -606,6 +606,9 @@ header {
 }
 .content .guyana .guyanaBlurb {
   width: calc(66% - 30px);
+}
+.content .guyana .guyanaBlurb h4 {
+  color: #0C5F4C;
 }
 .content .guyana .guyanaImage {
   width: 34%;
@@ -712,6 +715,10 @@ header {
 .pageLinks .contact h5 {
   color: #0C5F4C;
 }
+.pageLinks .beachHouses h5:hover, .pageLinks .community h5:hover, .pageLinks .blog h5:hover,
+.pageLinks .contact h5:hover {
+  text-decoration: underline;
+}
 .pageLinks .beachHouses p, .pageLinks .community p, .pageLinks .blog p,
 .pageLinks .contact p {
   margin: 0;
@@ -719,41 +726,68 @@ header {
 
 .schedule {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  margin: 0 auto;
+}
+.schedule .plan {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+.schedule .plan .planBlurb {
+  width: 45%;
+}
+.schedule .plan .planImage {
+  position: relative;
+  top: -75px;
+  left: -125px;
+  width: 55%;
+}
+.schedule .plan .planImage img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.schedule .plan .planImage .borderLines2 {
+  border-right: 2.5rem solid #50E3C2;
+  border-bottom: 2.5rem solid #50E3C2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -15px;
+  right: -25px;
 }
 .schedule .newLocations {
   display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
   position: relative;
-  width: 50%;
-  height: 100%;
 }
 .schedule .newLocations .newLocationsBlurb {
-  width: 80%;
   text-align: right;
+  width: 45%;
 }
 .schedule .newLocations .newLocationsImage {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: -80px;
-  left: 0px;
+  width: 55%;
+  position: relative;
+  bottom: -115px;
+  right: -122px;
 }
 .schedule .newLocations .newLocationsImage img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.schedule .newLocations .newLocationsImage .borderLines3 {
+  border-left: 2.5rem solid #50E3C2;
+  border-bottom: 2.5rem solid #50E3C2;
+  width: 100%;
   height: 100%;
-}
-.schedule .newLocations .newLocationsImage .borderLines2 {
-  border-bottom: 2rem solid #50E3C2;
-  border-right: 2rem solid #50E3C2;
   position: absolute;
-}
-.schedule .plan {
-  width: calc(50% - 25px);
-}
-.schedule .plan .planBlurb {
-  width: 80%;
+  bottom: -17px;
+  right: 25px;
 }
 .schedule h4 {
   color: #063974;
@@ -779,6 +813,79 @@ header {
 }
 .freeTrip button {
   margin: 15px 0px;
+}
+
+.blog {
+  position: relative;
+  top: -325px;
+  left: -105px;
+}
+
+.blogPage {
+  display: flex;
+  justify-content: space-between;
+}
+.blogPage h2 {
+  padding: 25px 75px;
+  color: #ffffff;
+}
+.blogPage h5 {
+  color: #0C5F4C;
+}
+.blogPage .blogImage {
+  position: relative;
+  width: 100%;
+}
+.blogPage .blogImage img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.blogPage .blogImage .blogImageBorder {
+  border-right: 2.5rem solid #50E3C2;
+  border-bottom: 2.5rem solid #50E3C2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -16px;
+  right: -25px;
+}
+.blogPage .blogPost {
+  border-bottom: 0.5rem solid #50E3C2;
+  border-right: 0.5rem solid #50E3C2;
+}
+.blogPage .blogPost .blogInfo p {
+  display: inline;
+  font-style: italic;
+  color: #063974;
+}
+.blogPage .blogPost #author {
+  font-weight: bold;
+}
+
+.postedComments {
+  display: flex;
+  flex-direction: column;
+}
+.postedComments #commentHeading {
+  font-weight: bold;
+}
+.postedComments .commentBlock {
+  display: flex;
+  justify-content: space-between;
+}
+.postedComments .commentBlock .comment {
+  padding: 0 50px;
+}
+.postedComments .commentBlock .commentData #commentDate, .postedComments .commentBlock .commentData #user {
+  display: inline;
+}
+.postedComments .commentBlock .commentData p {
+  margin-top: 0;
+  color: #063974;
+}
+.postedComments .commentBlock .commentImage {
+  padding: 5px 15px 0 0;
 }
 
 .contactSection {

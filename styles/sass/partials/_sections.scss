@@ -1,6 +1,10 @@
 @use "variables" as *;
 
+
+//////////////
 // home page
+/////////////
+
 .content {
     margin-bottom: 150px;
     .guyana {
@@ -9,6 +13,9 @@
         margin-bottom: 150px;
         .guyanaBlurb {
             width: calc((100%*.66) - 30px);
+            h4 {
+                color: $spruce;
+            }
         }
         .guyanaImage {
             width: calc(100%*.34);
@@ -111,6 +118,9 @@
             }
             h5 {
                 color: $spruce;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
             p {
                 margin: 0;
@@ -120,39 +130,66 @@
 
 .schedule {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    .newLocations {
+    margin: 0 auto;
+    .plan {
         display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
         position: relative;
-        width: calc(100%/2);
-        height: 100%;
-        .newLocationsBlurb {
-            width: 80%;
-            text-align: right;
+        .planBlurb {
+            width: 45%;
         }
-        .newLocationsImage {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            top: -80px;
-            left: 0px;
+        .planImage {
+            position: relative;
+            top: -75px;
+            left: -125px;
+            width: 55%;
             img {
                 width: 100%;
-                height: 100%;
+                max-width: 100%;
+                height: auto;
             }
             .borderLines2 {
-                border-bottom: 2rem solid $greenishCyan;
-                border-right: 2rem solid $greenishCyan;
+                border-right: 2.5rem solid $greenishCyan;
+                border-bottom: 2.5rem solid $greenishCyan;
+                width: 100%;
+                height: 100%;
                 position: absolute;
+                bottom: -15px;
+                right: -25px;
             }
         }
     }
-    .plan {
-        width: calc((100%/2) - 25px);
-        .planBlurb {
-            width: 80%;
+    .newLocations {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        .newLocationsBlurb {
+            text-align: right;
+            width: 45%;
+        }
+        .newLocationsImage {
+            width: 55%;
+            position: relative;
+            bottom: -115px;
+            right: -122px;
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+            .borderLines3 {
+            border-left: 2.5rem solid $greenishCyan;
+            border-bottom: 2.5rem solid $greenishCyan;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: -17px;
+            right: 25px;
+            }
         }
     }
     h4 {
@@ -182,7 +219,92 @@
     }
 }
 
+//////////////
+// blog page
+/////////////
+
+.blog {
+    position: relative;
+    top: -325px;
+    left: -105px;
+}
+
+.blogPage {
+    display: flex; 
+    justify-content: space-between;
+    h2 {
+        padding: 25px 75px;
+        color: $white;
+    }
+    h5 {
+        color: $spruce;
+    }
+    .blogImage {
+        position: relative;
+        width: 100%;
+        // top: -50px;
+        // left: -20px;
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        .blogImageBorder {
+            border-right: 2.5rem solid $greenishCyan;
+            border-bottom: 2.5rem solid $greenishCyan;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: -16px;
+            right: -25px;
+        }
+    }
+    .blogPost {
+        border-bottom: 0.5rem solid $greenishCyan;
+        border-right: 0.5rem solid $greenishCyan;
+        .blogInfo p {
+            display: inline;
+            font-style: italic;
+            color: $twilightBlue;
+        }
+        #author {
+            font-weight: bold;
+        }
+    }
+}
+
+.postedComments {
+    display: flex;
+    flex-direction: column;
+    #commentHeading {
+        font-weight: bold;
+    }
+    .commentBlock{
+        display: flex;
+        justify-content: space-between;
+        .comment {
+            padding: 0 50px;
+        }
+        .commentData {
+            #commentDate, #user {
+                display: inline;
+            }
+            p {
+                margin-top: 0;
+                color: $twilightBlue;
+            }
+        }
+        .commentImage {
+            padding: 5px 15px 0 0;
+        }
+    }
+}
+
+
+/////////////////
 // contact page
+////////////////
+
 
 .contactSection {
     display: flex;
