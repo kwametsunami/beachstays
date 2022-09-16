@@ -604,6 +604,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 150px;
+  height: auto;
 }
 .content .guyana .guyanaBlurb {
   width: calc(66% - 30px);
@@ -615,22 +616,17 @@ header {
   width: 34%;
   max-width: 100%;
   height: auto;
+  display: flex;
   position: relative;
+  bottom: 0px;
+  left: 0px;
 }
 .content .guyana .guyanaImage img {
   width: 100%;
   height: auto;
   max-width: 100%;
-}
-.content .guyana .guyanaImage .borderLines {
-  border-left: 2.5rem solid #50E3C2;
-  border-bottom: 2.5rem solid #50E3C2;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: -15px;
-  left: -25px;
-  z-index: -1;
+  align-self: center;
+  box-shadow: -25px 25px #50E3C2;
 }
 
 .background {
@@ -649,7 +645,9 @@ header {
   align-content: space-between;
   align-items: center;
   position: relative;
-  width: 100%;
+  width: calc(33.3333333333% - 20px);
+  max-width: 100%;
+  margin: 0 auto;
   transition: all 0.8s;
 }
 .background .imageGallery .beachHouseGallery img {
@@ -748,15 +746,7 @@ header {
   width: 100%;
   max-width: 100%;
   height: auto;
-}
-.schedule .plan .planImage .borderLines2 {
-  border-right: 2.5rem solid #50E3C2;
-  border-bottom: 2.5rem solid #50E3C2;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: -15px;
-  right: -25px;
+  box-shadow: 25px 25px #50E3C2;
 }
 .schedule .newLocations {
   display: flex;
@@ -778,15 +768,7 @@ header {
   width: 100%;
   max-width: 100%;
   height: auto;
-}
-.schedule .newLocations .newLocationsImage .borderLines3 {
-  border-left: 2.5rem solid #50E3C2;
-  border-bottom: 2.5rem solid #50E3C2;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: -17px;
-  right: 25px;
+  box-shadow: -25px 25px #50E3C2;
 }
 .schedule h4 {
   color: #063974;
@@ -842,15 +824,7 @@ header {
   width: 100%;
   max-width: 100%;
   height: auto;
-}
-.blogPage .blogImage .blogImageBorder {
-  border-right: 2.5rem solid #50E3C2;
-  border-bottom: 2.5rem solid #50E3C2;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: -16px;
-  right: -25px;
+  box-shadow: 25px 25px #50E3C2;
 }
 .blogPage .blogPost {
   border-bottom: 0.5rem solid #50E3C2;
