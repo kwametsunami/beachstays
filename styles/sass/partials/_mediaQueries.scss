@@ -235,6 +235,9 @@
     }
     .postedComments {
         padding-left: 0px;
+        #commentHeading {
+            text-align: center;
+        }
         .commentBlock {
             flex-direction: column;
             align-items: center;
