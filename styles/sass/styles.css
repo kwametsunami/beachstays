@@ -1198,6 +1198,12 @@ footer p {
     align-items: center;
     text-align: center;
   }
+  .postedComments .commentBlock .comment {
+    padding: 0;
+  }
+  .postedComments .commentForm form {
+    padding: 0;
+  }
   .postedComments .commentForm form input {
     padding: 0;
   }
