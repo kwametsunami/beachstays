@@ -370,7 +370,7 @@ textarea::placeholder {
   margin: 0 auto;
 }
 
-button {
+button:not(.dropdown) {
   background-color: #063974;
   padding: 7px 10px;
   border: 2px #063974 solid;
@@ -382,11 +382,11 @@ button {
   letter-spacing: 1px;
   font-size: 2rem;
 }
-button:hover {
+button:not(.dropdown):hover {
   background-color: #ffffff;
   color: #063974;
 }
-button:focus {
+button:not(.dropdown):focus {
   background-color: #ffffff;
   color: #063974;
 }
@@ -426,7 +426,7 @@ form .topForm {
 form .topForm input {
   border: 0;
   border-bottom: 2px solid #50E3C2;
-  width: calc(50% - 20px);
+  width: calc(50% - 7.5px);
   padding: 20px;
 }
 form .topForm input[type=text] {
@@ -503,20 +503,66 @@ form button {
 }
 
 .mobile {
-  display: flex;
-  justify-content: flex-end;
   display: none;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.mobile h6 {
+  margin: 0;
+  padding: 0;
+  color: #50E3C2;
+  display: inline-block;
+  transition: 0.5s;
+}
+.mobile h6:hover {
+  transform: scale(1.1);
+}
+.mobile h6 a:hover {
+  color: #ffffff;
+}
+.mobile .hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 2;
+}
+.mobile .hamburgerMenu:hover .dropdownList {
+  display: block;
 }
 .mobile .hamburgerMenu .dropdownList {
+  display: none;
   text-align: center;
   color: white;
   font-size: 2rem;
-  padding: 10px 5px;
-  border: 2px solid #acacac;
-  background-color: #acacac;
+  padding: 10px 0;
+  margin: 5px 0;
+  background-color: #063974;
 }
 .mobile .hamburgerMenu .dropdownList li {
-  padding: 2px 0;
+  padding: 2px 5px;
+}
+.mobile .hamburgerMenu .dropdownList li:hover {
+  background-color: #ffffff;
+  color: #063974;
+}
+.mobile .hamburgerMenu button {
+  border: none;
+  background-color: transparent;
+  color: #50E3C2;
+  padding: 0;
+  margin: 0;
+}
+.mobile .hamburgerMenu button .fa-solid {
+  border: 0;
+  background-color: transparent;
+  color: #50E3C2;
+  font-size: 4rem;
+}
+.mobile .hamburgerMenu button .fa-solid:hover {
+  color: #ffffff;
 }
 
 header {
@@ -598,7 +644,7 @@ header {
 }
 
 .content {
-  margin-bottom: 150px;
+  margin-bottom: 75px;
 }
 .content .guyana {
   display: flex;
@@ -639,7 +685,7 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.background .imageGallery .beachHouseGallery {
+.background .imageGallery .beachHouseGallery1, .background .imageGallery .beachHouseGallery2, .background .imageGallery .beachHouseGallery3 {
   display: flex;
   justify-content: space-between;
   align-content: space-between;
@@ -650,12 +696,12 @@ header {
   margin: 0 auto;
   transition: all 0.8s;
 }
-.background .imageGallery .beachHouseGallery img {
+.background .imageGallery .beachHouseGallery1 img, .background .imageGallery .beachHouseGallery2 img, .background .imageGallery .beachHouseGallery3 img {
   width: 100%;
   max-width: 100%;
   height: auto;
 }
-.background .imageGallery .beachHouseGallery a p {
+.background .imageGallery .beachHouseGallery1 a p, .background .imageGallery .beachHouseGallery2 a p, .background .imageGallery .beachHouseGallery3 a p {
   position: absolute;
   margin: auto;
   left: 0;
@@ -668,13 +714,13 @@ header {
   font-family: "Playfair Display SC";
   color: #373737;
 }
-.background .imageGallery .beachHouseGallery:hover {
+.background .imageGallery .beachHouseGallery1:hover, .background .imageGallery .beachHouseGallery2:hover, .background .imageGallery .beachHouseGallery3:hover {
   transform: scale(1.05);
 }
-.background .imageGallery .beachHouseGallery:hover img {
+.background .imageGallery .beachHouseGallery1:hover img, .background .imageGallery .beachHouseGallery2:hover img, .background .imageGallery .beachHouseGallery3:hover img {
   opacity: 0.3;
 }
-.background .imageGallery .beachHouseGallery:hover p {
+.background .imageGallery .beachHouseGallery1:hover p, .background .imageGallery .beachHouseGallery2:hover p, .background .imageGallery .beachHouseGallery3:hover p {
   display: inline;
   opacity: 1;
 }
@@ -800,15 +846,18 @@ header {
   position: relative;
   top: -325px;
   left: -105px;
+  width: 75%;
 }
 
 .blogPage {
   display: flex;
   justify-content: space-between;
   position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 .blogPage h2 {
-  padding: 25px 75px;
+  padding: 25px 200px;
   color: #ffffff;
 }
 .blogPage h5 {
@@ -839,14 +888,14 @@ header {
   font-weight: bold;
 }
 .blogPage .blogPost .blogBlurb {
-  padding-left: 125px;
+  padding-left: 205px;
   padding-right: 50px;
 }
 
 .postedComments {
   display: flex;
   flex-direction: column;
-  padding-left: 125px;
+  padding-left: 205px;
 }
 .postedComments #commentHeading {
   font-weight: bold;
@@ -871,8 +920,17 @@ header {
 
 .mission {
   position: relative;
-  right: -15.5px;
   padding-top: 100px;
+  width: 30%;
+}
+.mission img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.mission .missionStatement {
+  width: 100%;
+  word-wrap: break-word;
 }
 .mission .missionStatement a {
   color: #0C5F4C;
@@ -904,7 +962,7 @@ header {
 .contactSection .contactForm {
   position: relative;
   top: -375px;
-  left: -150px;
+  left: -50px;
 }
 .contactSection .contactForm h2 {
   color: #ffffff;
@@ -913,7 +971,8 @@ header {
 .contactSection .contactInfo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 150px;
+  padding-left: 90px;
 }
 .contactSection .contactInfo #contactEmail {
   font-weight: bold;
@@ -935,4 +994,347 @@ footer {
 footer p {
   color: #ffffff;
   line-height: 0px;
+}
+
+@media (max-width: 1250px) {
+  #homePage .headerWrapper .sunglasses {
+    top: 45%;
+  }
+  #homePage .headerWrapper .title {
+    left: 20%;
+  }
+  .blogPage h2 {
+    padding: 25px 100px;
+  }
+  #contactPage {
+    height: 40vh;
+  }
+  .contactSection {
+    flex-direction: column;
+  }
+  .contactSection .contactForm {
+    top: 0;
+    left: 0;
+  }
+  .contactSection .contactForm h2 {
+    color: #063974;
+    text-align: center;
+    font-size: 7.5rem;
+  }
+  .contactSection .contactInfo {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+  }
+  .contactSection .contactInfo .socialBar {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1000px) {
+  #homePage .headerWrapper .sunglasses {
+    display: none;
+  }
+  #homePage .headerWrapper .title {
+    text-align: center;
+    left: 15%;
+  }
+  #homePage .headerWrapper .title .titleTop {
+    font-size: 5rem;
+    margin: 0 0 20px;
+  }
+  #homePage .headerWrapper .title .titleBottom {
+    font-size: 9.5rem;
+  }
+}
+@media (max-width: 810px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  #homePage .headerWrapper .title {
+    position: relative;
+    top: 1%;
+    left: 0;
+    margin: auto;
+  }
+  #homePage .headerWrapper .title .titleTop {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+  #homePage .headerWrapper .title .titleBottom {
+    font-size: 6.5rem;
+  }
+  .content .guyana {
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+  .content .guyana .guyanaBlurb {
+    width: 100%;
+    text-align: center;
+    padding: 0 50px 25px;
+  }
+  .content .guyana .guyanaImage {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .content .guyana .guyanaImage img {
+    box-shadow: none;
+  }
+  .background .imageGallery .beachHouseGallery a p {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+  }
+  .pageLinks {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .pageLinks .beachHouses, .pageLinks .community, .pageLinks .blogLink, .pageLinks .contact {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .pageLinks .beachHouses .linkBlurb, .pageLinks .community .linkBlurb, .pageLinks .blogLink .linkBlurb, .pageLinks .contact .linkBlurb {
+    width: 100%;
+  }
+  .background .imageGallery .beachHouseGallery1, .background .imageGallery .beachHouseGallery2 {
+    width: calc(50% - 20px);
+  }
+  .background .imageGallery .beachHouseGallery1 a p, .background .imageGallery .beachHouseGallery2 a p {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .background .imageGallery .beachHouseGallery3 {
+    display: none;
+  }
+  .background .schedule .plan {
+    flex-direction: column;
+    padding: 0 50px;
+  }
+  .background .schedule .plan .planBlurb {
+    width: 100%;
+    text-align: center;
+    padding: 0 50px;
+  }
+  .background .schedule .plan .planImage {
+    width: 75%;
+    top: 0px;
+    left: 0px;
+    margin: 0 auto;
+  }
+  .background .schedule .plan .planImage img {
+    box-shadow: none;
+  }
+  .background .schedule .newLocations {
+    flex-direction: column-reverse;
+  }
+  .background .schedule .newLocations .newLocationsBlurb {
+    width: 100%;
+    text-align: center;
+    padding: 0 50px;
+  }
+  .background .schedule .newLocations .newLocationsImage {
+    width: 75%;
+    top: 0px;
+    left: 0px;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+  .background .schedule .newLocations .newLocationsImage img {
+    box-shadow: none;
+  }
+  .bottomBackground {
+    height: 50vh;
+  }
+  #blogPage {
+    height: 40vh;
+  }
+  .blog {
+    top: 0;
+    left: 0;
+  }
+  .blogPage {
+    flex-direction: column;
+    align-items: center;
+  }
+  .blogPage h2 {
+    color: #063974;
+    font-size: 6.5rem;
+    padding: 0;
+    text-align: center;
+  }
+  .blogPage .blogImage {
+    top: 0;
+    left: 0;
+  }
+  .blogPage .blogImage img {
+    box-shadow: none;
+  }
+  .blogPage .blogPost {
+    border-right: 0;
+    border-bottom: 0;
+    margin: 0 auto;
+  }
+  .blogPage .blogPost .blogBlurb {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+  }
+  .blogPage .blogPost .blogBlurb h5 {
+    text-align: center;
+  }
+  .blogPage .blogPost .blogBlurb .blogInfo {
+    margin: 0 auto;
+  }
+  .postedComments {
+    padding-left: 0px;
+  }
+  .postedComments .commentBlock {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .postedComments .commentForm form input {
+    padding: 0;
+  }
+  .postedComments .commentForm form input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .postedComments .commentForm form input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .postedComments .commentForm form input::placeholder {
+    font-size: 1rem;
+  }
+  .mission {
+    width: 75%;
+    text-align: center;
+  }
+  .mission .recentPosts {
+    padding-bottom: 50px;
+  }
+  #contactPage {
+    height: 35vh;
+  }
+  .contactSection {
+    flex-direction: column;
+  }
+  .contactSection .contactForm {
+    top: 0;
+    left: 0;
+  }
+  .contactSection .contactForm h2 {
+    color: #063974;
+    text-align: center;
+  }
+  .contactSection .contactForm form .formBorder {
+    border-right: none;
+    border-bottom: none;
+  }
+  .contactSection .contactInfo {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .contactSection .contactInfo .socialBar {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .contactSection .contactForm h2 {
+    font-size: 7.5rem;
+  }
+  .contactSection .contactForm form {
+    padding: 25px;
+  }
+  .contactSection .contactForm form input::-moz-placeholder {
+    font-size: 1.5rem;
+  }
+  .contactSection .contactForm form input:-ms-input-placeholder {
+    font-size: 1.5rem;
+  }
+  .contactSection .contactForm form input::placeholder {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  button:not(.dropdown) {
+    font-size: 1.5rem;
+    padding: 5px 8px;
+  }
+  #homePage .headerWrapper .title .titleTop {
+    font-size: 2.5rem;
+  }
+  #homePage .headerWrapper .title .titleTop h3 {
+    line-height: 0;
+  }
+  #homePage .headerWrapper .title .titleBottom {
+    font-size: 4.5rem;
+  }
+  .content {
+    margin-bottom: 50px;
+  }
+  .content .guyana .guyanaBlurb {
+    padding: 0 20px 25px;
+  }
+  .background .imageGallery .beachHouseGallery1, .background .imageGallery .beachHouseGallery2 {
+    width: calc(50% - 20px);
+  }
+  .background .imageGallery .beachHouseGallery1 a p, .background .imageGallery .beachHouseGallery2 a p {
+    font-size: 1.5rem;
+    line-height: 20px;
+  }
+}
+.pageLinks {
+  padding: 35px 0 50px;
+}
+.pageLinks .beachHouses h5, .pageLinks .community h5, .pageLinks .blogLink h5, .pageLinks .contact h5 {
+  font-size: 3rem;
+}
+.pageLinks .beachHouses .fa-solid, .pageLinks .community .fa-solid, .pageLinks .blogLink .fa-solid, .pageLinks .contact .fa-solid {
+  top: 42px;
+  left: 0px;
+}
+
+.background .schedule h4 {
+  margin: 25px 0;
+}
+.background .schedule .plan {
+  padding: 0 20px;
+}
+.background .schedule .plan .planBlurb {
+  padding: 0;
+}
+.background .schedule .newLocations {
+  padding: 0 20px;
+}
+.background .schedule .newLocations .newLocationsBlurb {
+  padding: 0;
+}
+
+.bottomBackground {
+  height: 35vh;
+}
+
+.freeTrip {
+  padding-top: 50px;
+}
+.freeTrip h4 {
+  font-size: 3rem;
+}
+
+footer p {
+  font-size: 1.5rem;
+}
+
+#blogPage .mobile h6 {
+  font-size: 2.5rem;
+}
+
+#contactPage .mobile h6 {
+  font-size: 2.5rem;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,410 @@
 @use "variables" as *;
 
-// 1000px, 800px, 500px, 
+@media (max-width: 1250px){
+    // home page
+    #homePage {
+        .headerWrapper {
+            .sunglasses {
+                top: 45%;
+            }
+            .title {
+                left: 20%;
+            }
+        }
+    }
+    // blog page
+    .blogPage {
+        h2 {
+            padding: 25px 100px;
+        }
+    }
+    // contact page
+    #contactPage {
+        height: 40vh;
+    }
+    .contactSection {
+        flex-direction: column;
+        .contactForm {
+            top: 0;
+            left: 0;
+            h2 {
+                color: $twilightBlue;
+                text-align: center;
+                font-size: 7.5rem;
+            }
+        }
+        .contactInfo {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 0px;
+            .socialBar {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1000px){
+    #homePage {
+            .headerWrapper {
+                .sunglasses {
+                    display: none;
+                }
+                .title {
+                    text-align: center;
+                    left: 15%;
+                    .titleTop {
+                        font-size: 5rem;
+                        margin: 0 0 20px;
+                    }
+                    .titleBottom {
+                        font-size: 9.5rem;
+                    }
+                }
+            }
+        }
+
+}
+
+@media (max-width: 810px){
+    // home page
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: flex;
+    }
+    #homePage {
+        .headerWrapper {
+            .title {
+                position: relative;
+                top: 1%;
+                left: 0;
+                margin: auto;
+                .titleTop {
+                    font-size: 3.5rem;
+                    margin: 0;
+                }
+                .titleBottom {
+                    font-size: 6.5rem;
+                }
+            }
+        }
+    }
+    .content {
+        .guyana {
+            margin-bottom: 50px;
+            flex-direction: column;
+            .guyanaBlurb {
+                width: 100%;
+                text-align: center;
+                padding: 0 50px 25px;
+            }
+            .guyanaImage {
+                width: 50%;
+                margin: 0 auto;
+                img {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .background {
+        .imageGallery {
+            .beachHouseGallery {
+                a p {
+                    font-size: 1.5rem;
+                    letter-spacing: 0;
+                    }
+                }
+            }
+        }
+
+
+    .pageLinks {
+        flex-direction: column;
+        margin: 0 auto;
+        .beachHouses, .community, .blogLink, .contact {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            .linkBlurb {
+                width: 100%;
+            }
+        }
+    }
+    .background {
+        .imageGallery {
+            .beachHouseGallery1, .beachHouseGallery2 {
+                width: calc((100%/2) - 20px);
+                a p {
+                    font-size: 2rem;
+                    line-height: 30px;
+                }
+            }
+            .beachHouseGallery3 {
+                display: none;
+            }
+        }
+        .schedule {
+            .plan {
+                flex-direction: column;
+                padding: 0 50px;
+                .planBlurb {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 50px;
+                }
+                .planImage {
+                    width: 75%;
+                    top: 0px;
+                    left: 0px;
+                    margin: 0 auto;
+                    img {
+                        box-shadow: none;
+                    }
+                }
+            }
+            .newLocations {
+                flex-direction: column-reverse;
+                .newLocationsBlurb {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 50px;
+                }
+                .newLocationsImage {
+                    width: 75%;
+                    top: 0px;
+                    left: 0px;
+                    padding-top: 50px;
+                    margin: 0 auto;
+                    img {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+    .bottomBackground {
+        height: 50vh
+    }
+    // blog page
+    #blogPage {
+        height: 40vh;
+    }
+    .blog {
+        top: 0;
+        left: 0;
+    }
+    .blogPage {
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            color: $twilightBlue;
+            font-size: 6.5rem;
+            padding: 0;
+            text-align: center;
+        }
+        .blogImage {
+            top: 0;
+            left: 0;
+            img {
+                box-shadow: none;
+            }
+        }
+        .blogPost {
+            border-right: 0;
+            border-bottom: 0;
+            margin: 0 auto;
+            .blogBlurb {
+                padding-left: 0px;
+                padding-right: 0px;
+                text-align: center;
+                h5 {
+                    text-align: center;
+                }
+                .blogInfo {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    .postedComments {
+        padding-left: 0px;
+        .commentBlock {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .commentForm {
+            form {
+                input {
+                    padding: 0;
+                    &::placeholder {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .mission {
+        width: 75%;
+        text-align: center;
+        .recentPosts {
+            padding-bottom : 50px;
+        }
+    }
+    // contact page
+    #contactPage {
+        height: 35vh;
+    }
+    .contactSection {
+        flex-direction: column;
+        .contactForm {
+            top: 0;
+            left: 0;
+            h2 {
+                color: $twilightBlue;
+                text-align: center;
+            }
+            form {
+                .formBorder {
+                    border-right: none;
+                    border-bottom: none;
+                }
+            }
+        }
+        .contactInfo {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            .socialBar {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .contactSection {
+        .contactForm {
+            h2 {
+                font-size: 7.5rem;
+            }
+            form {
+                padding: 25px;
+                input {
+                    &::placeholder {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    // home page
+    button:not(.dropdown) {
+        font-size: 1.5rem;
+        padding: 5px 8px;
+    }
+    #homePage {
+        .headerWrapper {
+            .title {
+                .titleTop {
+                    font-size: 2.5rem;
+                    h3 {
+                        line-height: 0;
+                    }
+                }
+                .titleBottom {
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+    .content {
+        margin-bottom: 50px;
+        .guyana {
+            .guyanaBlurb {
+                padding: 0 20px 25px;
+            }
+        }
+    }
+    .background {
+        .imageGallery {
+            .beachHouseGallery1, .beachHouseGallery2 {
+                width: calc((100%/2) - 20px);
+                    a p {
+                        font-size: 1.5rem;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .pageLinks {
+        padding: 35px 0 50px;
+        .beachHouses, .community, .blogLink, .contact {
+            h5 {
+                font-size: 3rem;
+            }
+            .fa-solid {
+                top: 42px;
+                left: 0px;
+            }
+        }
+    }
+    .background {
+        .schedule {
+            h4 {
+                margin: 25px 0;
+            }
+            .plan {
+                padding: 0 20px;
+                .planBlurb {
+                    padding: 0;
+                }
+            }
+            .newLocations {
+                padding: 0 20px;
+                .newLocationsBlurb {
+                    padding: 0;
+                }
+            }
+        }
+    }    
+    .bottomBackground {
+        height: 35vh;
+    }
+    .freeTrip {
+        padding-top: 50px;
+        h4 {
+            font-size: 3rem;
+        }
+    }
+    footer {
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    // blog page
+    #blogPage {
+        .mobile {
+            h6 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    // contact page
+    #contactPage {
+        .mobile {
+            h6 {
+                font-size: 2.5rem;
+            }
+        }
+    }

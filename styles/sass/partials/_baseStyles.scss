@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 
-button {
+button:not(.dropdown) {
     background-color: $twilightBlue;
     padding: 7px 10px;
     border: 2px $twilightBlue solid;
@@ -60,7 +60,7 @@ form {
         input {
             border: 0;
             border-bottom: 2px solid $greenishCyan;
-            width: calc((100%/2) - 20px);
+            width: calc((100%/2) - 7.5px);
             padding: 20px;
             &[type=text] {
                 margin-right: 10px;

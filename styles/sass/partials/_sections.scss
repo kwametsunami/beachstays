@@ -6,7 +6,7 @@
 /////////////
 
 .content {
-    margin-bottom: 150px;
+    margin-bottom: 75px;
     .guyana {
         display: flex;
         justify-content: space-between;
@@ -33,16 +33,6 @@
                 align-self: center;
                 box-shadow: -25px 25px $greenishCyan;
             }
-            // .borderLines {
-            //     border-left: 2.5rem solid $greenishCyan;
-            //     border-bottom: 2.5rem solid $greenishCyan;
-            //     width: 100%;
-            //     height: 100%;
-            //     position: absolute;
-            //     bottom: -15px;
-            //     left: -25px;
-            //     z-index: -1;
-            // }
         }
     }
  }
@@ -55,7 +45,7 @@
     .imageGallery {
         display: flex;
         justify-content: space-between;
-        .beachHouseGallery {
+        .beachHouseGallery1, .beachHouseGallery2, .beachHouseGallery3 {
             display: flex;
             justify-content: space-between;
             align-content: space-between;
@@ -158,15 +148,6 @@
                 height: auto;
                 box-shadow: 25px 25px $greenishCyan;
             }
-            // .borderLines2 {
-            //     border-right: 2.5rem solid $greenishCyan;
-            //     border-bottom: 2.5rem solid $greenishCyan;
-            //     width: 100%;
-            //     height: 100%;
-            //     position: absolute;
-            //     bottom: -15px;
-            //     right: -25px;
-            // }
         }
     }
     .newLocations {
@@ -189,15 +170,6 @@
                 height: auto;
                 box-shadow: -25px 25px $greenishCyan;
             }
-            // .borderLines3 {
-            // border-left: 2.5rem solid $greenishCyan;
-            // border-bottom: 2.5rem solid $greenishCyan;
-            // width: 100%;
-            // height: 100%;
-            // position: absolute;
-            // bottom: -17px;
-            // right: 25px;
-            // }
         }
     }
     h4 {
@@ -235,14 +207,17 @@
     position: relative;
     top: -325px;
     left: -105px;
+    width: calc((100%*0.75)); 
 }
 
 .blogPage {
     display: flex; 
     justify-content: space-between;
     position: relative;
+    width: 100%;
+    max-width: 100%;
     h2 {
-        padding: 25px 75px;
+        padding: 25px 200px;
         color: $white;
     }
     h5 {
@@ -259,15 +234,6 @@
             height: auto;
             box-shadow: 25px 25px $greenishCyan;
         }
-        // .blogImageBorder {
-        //     border-right: 2.5rem solid $greenishCyan;
-        //     border-bottom: 2.5rem solid $greenishCyan;
-        //     width: 100%;
-        //     height: 100%;
-        //     position: absolute;
-        //     bottom: -16px;
-        //     right: -25px;
-        // }
     }
     .blogPost {
         border-bottom: 0.5rem solid $greenishCyan;
@@ -281,7 +247,7 @@
             font-weight: bold;
         }
         .blogBlurb {
-            padding-left: 125px;
+            padding-left: 205px;
             padding-right: 50px;
         }
     }
@@ -290,7 +256,7 @@
 .postedComments {
     display: flex;
     flex-direction: column;
-    padding-left: 125px;
+    padding-left: 205px;
     #commentHeading {
         font-weight: bold;
     }
@@ -317,9 +283,16 @@
 
 .mission {
     position: relative;
-    right: -15.5px;
     padding-top: 100px;
+    width: calc(100%*0.3);
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
     .missionStatement {
+        width: 100%;
+        word-wrap: break-word;
         a {
             color: $spruce;
             &:hover {
@@ -357,7 +330,7 @@
     .contactForm {
         position: relative;
         top: -375px;
-        left: -150px;
+        left: -50px;
         h2 {
             color: $white;
             margin: 40px;
@@ -366,7 +339,8 @@
     .contactInfo {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding-top: 150px;
+        padding-left: 90px;
         #contactEmail {
             font-weight: bold;
             font-size: 3rem;
