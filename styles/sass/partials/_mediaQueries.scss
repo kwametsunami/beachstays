@@ -1,6 +1,7 @@
 @use "variables" as *;
 
-@media (max-width: 1250px){
+
+@media (max-width: 1285px){
     // home page
     #homePage {
         .headerWrapper {
@@ -63,6 +64,20 @@
                     }
                     .titleBottom {
                         font-size: 9.5rem;
+                    }
+                }
+            }
+        }
+        .background {
+            .schedule {
+                .plan {
+                    .planImage {
+                        top: 75px;
+                    }
+                }
+                .newLocations {
+                    .newLocationsImage {
+                        bottom: -185px;
                     }
                 }
             }
@@ -319,6 +334,15 @@
         font-size: 1.5rem;
         padding: 5px 8px;
     }
+    .mobile {
+        .hamburgerMenu {
+            button {
+                .fa-solid {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
     #homePage {
         .headerWrapper {
             .title {
@@ -353,65 +377,148 @@
                 }
             }
         }
-    }
-    .pageLinks {
-        padding: 35px 0 50px;
-        .beachHouses, .community, .blogLink, .contact {
-            h5 {
+        .pageLinks {
+            padding: 35px 0 50px;
+            .beachHouses, .community, .blogLink, .contact {
+                h5 {
+                    font-size: 3rem;
+                }
+                .fa-solid {
+                    top: 42px;
+                    left: 0px;
+                }
+            }
+        }
+        .background {
+            .schedule {
+                h4 {
+                    margin: 25px 0;
+                }
+                .plan {
+                    padding: 0 20px;
+                    .planBlurb {
+                        padding: 0;
+                    }
+                    .planImage {
+                        width: 100%;
+                    }
+                }
+                .newLocations {
+                    padding: 0 20px;
+                    .newLocationsBlurb {
+                        padding: 0;
+                    }
+                    .newLocationsImage {
+                        width: 100%;
+                    }
+                }
+            }
+        }    
+        .bottomBackground {
+            height: 35vh;
+        }
+        .freeTrip {
+            padding-top: 50px;
+            h4 {
                 font-size: 3rem;
             }
-            .fa-solid {
-                top: 42px;
-                left: 0px;
+        }
+        footer {
+            p {
+                font-size: 1.5rem;
             }
         }
-    }
-    .background {
-        .schedule {
-            h4 {
-                margin: 25px 0;
-            }
-            .plan {
-                padding: 0 20px;
-                .planBlurb {
-                    padding: 0;
-                }
-            }
-            .newLocations {
-                padding: 0 20px;
-                .newLocationsBlurb {
-                    padding: 0;
+        // blog page
+        #blogPage {
+            .mobile {
+                h6 {
+                    font-size: 2rem;
                 }
             }
         }
-    }    
-    .bottomBackground {
-        height: 35vh;
-    }
-    .freeTrip {
-        padding-top: 50px;
-        h4 {
-            font-size: 3rem;
-        }
-    }
-    footer {
-        p {
-            font-size: 1.5rem;
-        }
-    }
-    // blog page
-    #blogPage {
-        .mobile {
-            h6 {
+        .mission {
+            p {
+                font-size: 1.5rem;
+            }
+            .missionTitle {
                 font-size: 2.5rem;
+            }
+            .recentPosts {
+                p {
+                    font-size: 2.5rem; 
+                }
+                .recentPostsList {
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        // contact page
+        #contactPage {
+            .mobile {
+                h6 {
+                    font-size: 2rem;
+                }
+            }
+        }
+        .contactSection {
+            .contactForm {
+                h2 {
+                    font-size: 5rem;
+                    line-height: 4rem;
+                    margin: 40px 20px 0px 20px;
+                }
+            }
+            .contactInfo {
+                .contactAddress {
+                    #contactEmail {
+                        font-size: 2rem;
+                    }
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
             }
         }
     }
-    // contact page
-    #contactPage {
+        
+@media (max-width: 360px) {
+    // home page
         .mobile {
-            h6 {
-                font-size: 2.5rem;
+                .hamburgerMenu {
+                    button {
+                        .fa-solid {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+    #homePage {
+        .headerWrapper {
+            .title {
+                .titleTop {
+                    font-size: 2rem;
+                }
+                .titleBottom {
+                    font-size: 3.25rem;
+                }
             }
         }
     }
+    .pageLinks {
+        .beachHouses, .community, .blogLink, .contact {
+            h5 {
+                font-size: 2rem;
+            }
+            .icon {
+                .fa-solid {
+                    font-size: 2rem;
+                    width: 35px;
+                    height: 35px;
+                    top: 32px;
+                }
+            }
+        }
+    }
+}

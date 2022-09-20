@@ -128,20 +128,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 auto;
+    max-width: 1150px;
     .plan {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        max-width: 100%;
         position: relative;
         .planBlurb {
             width: 45%;
         }
         .planImage {
+            width: 50%;
             position: relative;
             top: -75px;
-            left: -125px;
-            width: 55%;
+            left: -2.5vw;
             img {
                 width: 100%;
                 max-width: 100%;
@@ -153,7 +154,6 @@
     .newLocations {
         display: flex;
         justify-content: space-between;
-        width: 100%;
         position: relative;
         .newLocationsBlurb {
             text-align: right;
@@ -163,7 +163,7 @@
             width: 55%;
             position: relative;
             bottom: -115px;
-            right: -122px;
+            right: -6vw;
             img {
                 width: 100%;
                 max-width: 100%;
