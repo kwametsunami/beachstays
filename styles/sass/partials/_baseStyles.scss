@@ -34,7 +34,7 @@ button:not(.dropdown) {
     font-size: 2.5rem;
 }
 
-form {
+form:not(.modalFormHolder) {
     background-color: $white;
     display: flex;
     flex-direction: column;

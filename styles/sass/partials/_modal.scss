@@ -1,0 +1,84 @@
+@use "variables" as *;
+
+.modalContainer {
+    z-index: 51;
+    position: fixed;
+    left: 9vw;
+    top: 20vh;
+    height: 100%;
+    overflow: auto;
+    display: none;
+}
+.modal {
+    /* change back to none */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: $greenishCyan;
+    z-index: 52;
+    .modalImage {
+        background: url(../../assets/modal-image.jpg) no-repeat center center/cover;
+        width: calc((100%*0.33) - 25px);
+        height: auto;
+    }
+    .modalContent {
+        width: calc((100%*0.66) - 25px);
+        padding: 35px;
+        .modalHeading {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            h2 {
+                font-size: 4rem;
+                letter-spacing: 3px; 
+            }
+            button {
+                outline: none;
+                border: none;
+                background: transparent;
+                position: absolute;
+                top: -20px;
+                right: -10px;
+            }
+            .fa-xmark {
+                font-size: 3.5rem;
+                color: $black;
+            }
+        }
+        .modalForm {
+            .modalFormHolder {
+                display: flex;
+                width: 100%;
+                label {
+                    display: none;
+                }
+                input[type="email"] {
+                    width: calc(100%*0.75);
+                    padding: 25px;
+                }
+                .subscribe {
+                    width: calc(100*0.25);
+                }
+                }
+            }
+        }
+    }
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.835);
+}
+
+
+
+
+
+
+
+
+

@@ -398,7 +398,7 @@ button:not(.dropdown):focus {
   font-size: 2.5rem;
 }
 
-form {
+form:not(.modalFormHolder) {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -406,7 +406,7 @@ form {
   position: relative;
   z-index: 5;
 }
-form .formBorder {
+form:not(.modalFormHolder) .formBorder {
   border-right: 2.5rem solid #50E3C2;
   border-bottom: 2.5rem solid #50E3C2;
   width: 100%;
@@ -416,44 +416,44 @@ form .formBorder {
   right: -25px;
   z-index: -2;
 }
-form .topForm {
+form:not(.modalFormHolder) .topForm {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 25px 0;
   position: relative;
 }
-form .topForm input {
+form:not(.modalFormHolder) .topForm input {
   border: 0;
   border-bottom: 2px solid #50E3C2;
   width: calc(50% - 7.5px);
   padding: 20px;
 }
-form .topForm input[type=text] {
+form:not(.modalFormHolder) .topForm input[type=text] {
   margin-right: 10px;
   position: absolute;
   left: 0px;
 }
-form .topForm input[type=email] {
+form:not(.modalFormHolder) .topForm input[type=email] {
   margin-left: 10px;
 }
-form .topForm input:focus {
+form:not(.modalFormHolder) .topForm input:focus {
   outline: none;
   border: 2px double #50E3C2;
 }
-form label[for=message] {
+form:not(.modalFormHolder) label[for=message] {
   display: inline-block;
   width: 100%;
 }
-form textarea {
+form:not(.modalFormHolder) textarea {
   border: 2px solid #50E3C2;
   padding: 20px;
 }
-form textarea:focus {
+form:not(.modalFormHolder) textarea:focus {
   outline: none;
   border: 2px double #50E3C2;
 }
-form button {
+form:not(.modalFormHolder) button {
   margin: 50px 0 0 0;
 }
 
@@ -641,6 +641,79 @@ header {
   width: 100%;
   max-width: 100%;
   z-index: -3;
+}
+
+.modalContainer {
+  z-index: 51;
+  position: fixed;
+  left: 9vw;
+  top: 20vh;
+  height: 100%;
+  overflow: auto;
+  display: none;
+}
+
+.modal {
+  /* change back to none */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: #50E3C2;
+  z-index: 52;
+}
+.modal .modalImage {
+  background: url(../../assets/modal-image.jpg) no-repeat center center/cover;
+  width: calc(33% - 25px);
+  height: auto;
+}
+.modal .modalContent {
+  width: calc(66% - 25px);
+  padding: 35px;
+}
+.modal .modalContent .modalHeading {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.modal .modalContent .modalHeading h2 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+}
+.modal .modalContent .modalHeading button {
+  outline: none;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+}
+.modal .modalContent .modalHeading .fa-xmark {
+  font-size: 3.5rem;
+  color: #000000;
+}
+.modal .modalContent .modalForm .modalFormHolder {
+  display: flex;
+  width: 100%;
+}
+.modal .modalContent .modalForm .modalFormHolder label {
+  display: none;
+}
+.modal .modalContent .modalForm .modalFormHolder input[type=email] {
+  width: 75%;
+  padding: 25px;
+}
+.modal .modalContent .modalForm .modalFormHolder .subscribe {
+  width: 25;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.835);
 }
 
 .content {
