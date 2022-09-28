@@ -703,7 +703,7 @@ header {
   padding: 25px;
 }
 .modal .modalContent .modalForm .modalFormHolder .subscribe {
-  width: 25;
+  width: 30%;
 }
 
 .modalOverlay {
@@ -746,6 +746,13 @@ header {
   max-width: 100%;
   align-self: center;
   box-shadow: -25px 25px #50E3C2;
+}
+
+.toTop {
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 .background {
@@ -1127,6 +1134,35 @@ footer p {
   .background .schedule .newLocations .newLocationsImage {
     bottom: -185px;
   }
+  .modal .modalImage {
+    width: 45%;
+  }
+  .modal .modalContent {
+    width: 55%;
+  }
+  .modal .modalContent .modalHeading h2 {
+    font-size: 3.5rem;
+  }
+  .modal .modalContent .modalBlurb {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .modal .modalContent .modalForm .modalFormHolder input[type=email] {
+    padding: 15px;
+  }
+  .modal .modalContent .modalForm .modalFormHolder input::-moz-placeholder {
+    font-size: 1.5rem;
+  }
+  .modal .modalContent .modalForm .modalFormHolder input:-ms-input-placeholder {
+    font-size: 1.5rem;
+  }
+  .modal .modalContent .modalForm .modalFormHolder input::placeholder {
+    font-size: 1.5rem;
+  }
+  .modal .modalContent .modalForm .modalFormHolder .subscribe {
+    width: 30%;
+    font-size: 1rem;
+  }
 }
 @media (max-width: 810px) {
   .desktop {
@@ -1228,6 +1264,38 @@ footer p {
   }
   .bottomBackground {
     height: 50vh;
+  }
+  .modal {
+    flex-direction: column;
+  }
+  .modal .modalImage {
+    width: 100%;
+  }
+  .modal .modalContent {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .modal .modalContent .modalForm .modalFormHolder {
+    flex-direction: column;
+  }
+  .modal .modalContent .modalForm .modalFormHolder input[type=email] {
+    width: 100%;
+  }
+  .modal .modalContent .modalForm .modalFormHolder input::-moz-placeholder {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .modal .modalContent .modalForm .modalFormHolder input:-ms-input-placeholder {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .modal .modalContent .modalForm .modalFormHolder input::placeholder {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .modal .modalContent .modalForm .modalFormHolder .subscribe {
+    width: 100%;
   }
   #blogPage {
     height: 40vh;

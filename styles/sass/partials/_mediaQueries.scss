@@ -82,6 +82,37 @@
                 }
             }
         }
+    .modal {
+        .modalImage {
+            width: calc((100%*0.45));
+        }
+        .modalContent {
+            width: calc((100%*0.55));
+            .modalHeading {
+                h2 {
+                    font-size: 3.5rem;
+                }
+            }
+            .modalBlurb {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            .modalForm {
+                .modalFormHolder {
+                    input[type="email"] {
+                        padding: 15px
+                    }
+                    input::placeholder {
+                        font-size: 1.5rem;
+                    }
+                    .subscribe {
+                        width: calc(100%*0.3);
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -207,6 +238,33 @@
     .bottomBackground {
         height: 50vh
     }
+    .modal {
+        flex-direction: column;
+        .modalImage {
+            width: 100%;
+        }
+        .modalContent {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            .modalForm {
+                .modalFormHolder {
+                    flex-direction: column;
+                    input[type="email"]{
+                        width: 100%;
+                    }
+                    input::placeholder {
+                        font-size: 2rem;
+                        text-align: center;
+                    }
+                    .subscribe {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
     // blog page
     #blogPage {
         height: 40vh;

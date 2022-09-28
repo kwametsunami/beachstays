@@ -7,7 +7,7 @@ const showPopup = () => {
     const showYourself = console.log("hello!")
 }
 
-window.onload = () => { setTimeout(showPopup, 1000) }
+window.onload = () => { setTimeout(showPopup, 4000) }
 
 const close = document.querySelector('.close').addEventListener('click', function () {
     modalBox.style.display = "none";
@@ -22,5 +22,6 @@ form.addEventListener('submit', function (event){
     if (email) {
         modalBox.style.display = "none";
         body.style.overflow = "auto";
+        alert("Thanks for subscribing!")
     }
 })
