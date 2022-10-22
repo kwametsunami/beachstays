@@ -646,7 +646,7 @@ header {
 .modalContainer {
   z-index: 51;
   position: fixed;
-  left: 9vw;
+  left: 17vw;
   top: 20vh;
   height: 100%;
   overflow: auto;
